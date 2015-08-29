@@ -1,5 +1,7 @@
 [![Code Climate](https://codeclimate.com/github/robinp7720/Blue-Stats-Minecraft/badges/gpa.svg)](https://codeclimate.com/github/robinp7720/Blue-Stats-Minecraft)
 # Blue-Stats-Minecraft
+
+[![Join the chat at https://gitter.im/robinp7720/Blue-Stats-Minecraft](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/robinp7720/Blue-Stats-Minecraft?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Blue Stats 3 is a complete remake/recode of Blue Stats.
 Blue Stats 3 uses a mysql backend to save and load configuartions, caches and other things to make Blue Stats even more powerfull.
 
