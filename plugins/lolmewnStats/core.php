@@ -76,18 +76,18 @@ class lolmewnStats extends MySQLplugin
 SELECT
   {$this->prefix}{$this->plugin['indexTable']}.name as name,
   {$this->prefix}{$stat}.{$this->plugin['idColumn']},
-  max({$this->prefix}{$stat}.value) as `value` 
+  max({$this->prefix}{$stat}.value) as `value`
 FROM {$this->prefix}{$stat}
 INNER JOIN `{$this->prefix}{$this->plugin['indexTable']}` on {$this->prefix}{$stat}.{$this->plugin['idColumn']} = {$this->prefix}{$this->plugin['indexTable']}.{$this->plugin['idColumn']}
 GROUP BY {$this->prefix}{$this->plugin['indexTable']}.name, {$this->prefix}{$stat}.{$this->plugin['idColumn']}
 ORDER BY value Desc";
         } else {
             $sql = "
-SELECT 
+SELECT
   {$this->prefix}{$this->plugin['indexTable']}.name as name,
   {$this->prefix}{$stat}.{$this->plugin['idColumn']},
-  sum({$this->prefix}{$stat}.value) as `value` 
-FROM {$this->prefix}{$stat} 
+  sum({$this->prefix}{$stat}.value) as `value`
+FROM {$this->prefix}{$stat}
 INNER JOIN `{$this->prefix}{$this->plugin['indexTable']}` on {$this->prefix}{$stat}.{$this->plugin['idColumn']} = {$this->prefix}{$this->plugin['indexTable']}.{$this->plugin['idColumn']}
 GROUP BY {$this->prefix}{$this->plugin['indexTable']}.name, {$this->prefix}{$stat}.{$this->plugin['idColumn']}
 ORDER BY value Desc";
@@ -183,6 +183,9 @@ ORDER BY value Desc";
                 }
             } elseif ($stat == "playtime") {
                 $output = secondsToTime($output);
+            }
+            elseif ($stat == "move" || "damage_taken") {
+                $output = round($output);
             }
             return $output;
         }

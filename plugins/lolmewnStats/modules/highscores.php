@@ -48,8 +48,6 @@ if ($showOnline == "true")
                                 $statDisplay = secondsToTime(round(time() - ($stat["value"]/1000)));
                             } elseif ($statName == "playtime") {
                                 $statDisplay = secondsToTime($stat["value"]);
-                            } elseif ($statName == "move") {
-                                $statDisplay = round($stat["value"]);
                             } else {
                                 $statDisplay = $stat["value"];
                             }
