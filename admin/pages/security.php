@@ -31,7 +31,7 @@
     <?php endif; ?>
 
 <?php else: ?>
-    <div class="alert alert-wanring" role="alert">
+    <div class="alert alert-warning" role="alert">
         <span class="glyphicon glyphicon glyphicon-sign" aria-hidden="true"></span>
         Windows is not officialy supported
     </div>
