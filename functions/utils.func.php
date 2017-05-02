@@ -144,6 +144,14 @@ function secondsToTime($seconds, $contract = true)
                 $output.= $tdays;
                 $values++;
             }
+            
+            if (!empty($thours) and $values < 2) {
+                if ($values !== 0) {
+                    $output.= " and ";
+                }
+                $output.= $thours;
+                $values++;
+            }
 
             if (!empty($mins) and $values < 2) {
                 if ($values !== 0) {
