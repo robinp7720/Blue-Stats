@@ -18,3 +18,8 @@
     <?php endforeach; ?>
     </tbody>
 </table>
+<script>
+    $(document).ready(function () {
+        $('#pvp-stats').DataTable();
+    });
+</script>
